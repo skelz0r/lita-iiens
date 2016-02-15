@@ -24,6 +24,17 @@ Lita.configure do |config|
 
   config.handlers.keepalive.url = ENV["URL"] || "http://0.0.0.0:8080"
 
+  if ENV["REDISTOGO_URL"]
+    redis_uri = URI.parse(ENV["REDISTOGO_URL"])
+
+    config.redis = {
+      host: redis_uri.host,
+      port: redis_uri.port,
+      user: redis_uri.user,
+      password: redis_uri.password
+    }
+  end
+
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"
