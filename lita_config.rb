@@ -35,6 +35,10 @@ Lita.configure do |config|
     }
   end
 
+  if ENV["ENVIRONMENT"] == "production"
+    config.http.port = ENV["PORT"]
+  end
+
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"
