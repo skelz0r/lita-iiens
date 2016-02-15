@@ -22,6 +22,8 @@ Lita.configure do |config|
   config.robot.adapter = :slack
   config.adapters.slack.token = ENV["SLACK_LITA_TOKEN"]
 
+  config.handlers.keepalive.url = ENV["URL"] || "http://0.0.0.0:8080"
+
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"

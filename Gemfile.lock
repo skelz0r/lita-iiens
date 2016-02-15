@@ -26,6 +26,8 @@ GEM
       thor (>= 0.18.1)
     lita-doge (0.1.0)
       lita (>= 4.7)
+    lita-keepalive (0.0.2)
+      lita (~> 4.0)
     lita-slack (1.7.2)
       eventmachine
       faraday
@@ -53,6 +55,7 @@ PLATFORMS
 DEPENDENCIES
   lita
   lita-doge
+  lita-keepalive
   lita-slack
 
 BUNDLED WITH

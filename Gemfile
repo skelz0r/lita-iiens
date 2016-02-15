@@ -4,3 +4,4 @@ gem "lita"
 gem "lita-slack"
 
 gem "lita-doge"
+gem "lita-keepalive"
